@@ -158,3 +158,43 @@ funkční kód, tím lepší).
 3. Vytvořte funkci, která vygeneruje náhodná hesla pro počet osob zadaný v parametru tak, aby heslo začínalo
    3 velkými písmeny, pokračovalo 3 malými písmeny, jedním speciálním znakem (-/+*) a končilo 3 náhodnými číslicemi.
 '''
+
+import camelcase
+import random
+import string
+c = camelcase.CamelCase()
+
+x = '12. 10. 2020'
+y = x.replace(". ", "")
+d = y[:2]
+m = y[2:4]
+y = y[4:]
+
+print(y + "-" + m + "-" + d)
+
+p = "To je promenna v Pythonu"
+
+def yeet(p):
+    x = p.lower()
+    y = x.replace(" ", "_")
+    print("To je promenna v Pythonu = " + y)
+
+    k = c.hump(p)
+    j = k.replace(" ", "")
+    print("To je promenna v Pythonu = " + j)
+
+yeet(p)
+
+def heslo():
+    v = ''.join(random.sample(string.ascii_uppercase, 3))
+    m = ''.join(random.sample(string.ascii_lowercase, 3))
+    c = ''.join(random.sample(string.digits, 3))
+    s = ''.join(random.sample(string.punctuation, 1))
+
+    heslo = v+m+s+c
+    return heslo
+
+o = input("Zadejte počet osob: ")
+
+for i in range(eval(o)):
+    print(heslo())
