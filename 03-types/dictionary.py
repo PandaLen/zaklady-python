@@ -7,6 +7,8 @@ Každému klíči je přiřazena jedna hodnota.
 
 # Collection which is unordered, changeable and indexed.
 # In Python dictionaries are written with curly brackets, and they have keys and values.
+# Kolekce, která je neuspořádaná, změnitelná a indexovaná.
+# V Pythonu jsou slovníky psány složenými závorkami a mají klíče a hodnoty.
 car = {
   'brand': 'Ford',
   'model': 'Mustang',
@@ -35,7 +37,7 @@ if 'z' in point:
 # Když hodnota neexistuje, vrací 0    
 print(f'point.get("v", 0): {point.get("v", 0)}')
 
-# Odstranění prvku ze slovníku  
+# Odstranění prvku ze slovníku
 del point['x']
 print(f'point: {point}')
 
@@ -94,3 +96,40 @@ child3          Linus               2011
 ---------------------------------------------
 Počet záznamů: 3
 '''
+
+videohry = {
+  'hra1': {
+    'nazev': ('League', 'of', 'Legends'),
+    'rok_vydani': 2009,
+    'zanry': list(('MOBA', 'Týmová hra', 'RPG', 'Pro více hráčů')),
+    'platforma': list(('Windows', 'MacOS', 'Android', 'iOS')),
+    'vydavatel': 'Riot Games',
+    'hodnoceni': '82%'
+  },
+  'hra2': {
+    'nazev': ('Teamfight', 'Tactics'),
+    'rok_vydani': 2019,
+    'zanry': list(('Strategie v reálném čase', 'Auto battler')),
+    'platforma': list(('Windows', 'MacOS', 'Android', 'iOS')),
+    'vydavatel': 'Riot Games',
+    'hodnoceni': '85%'
+  },
+  'hra3': {
+    'nazev': ('Valorant'),
+    'rok_vydani': 2020,
+    'zanry': list(('FPS', 'Týmová hra', 'Taktická střílečka', 'Pro více hráčů')),
+    'platforma': list('Windows'),
+    'vydavatel': 'Riot Games',
+    'hodnoceni': '90%'
+  }
+}
+
+del videohry['hra3']
+videohry['hra4'] = {
+    'nazev': ('Minecraft'),
+    'rok_vydani': 2009,
+    'zanry': list(('Sandbox', 'Survival', 'Krativní', 'Pro více hráčů', 'Hra s otevřeným svštem')),
+    'platforma': list(('Windows', 'Linux', 'MacOS', 'Android', 'iOS')),
+    'vydavatel': 'Mojang',
+    'hodnoceni': '93%'
+}
